@@ -1,0 +1,28 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" rx="12" />
+  <rect x="0" y="0" width="800" height="40" fill="#1e293b" rx="12" />
+  <circle cx="20" cy="20" r="6" fill="#ef4444" />
+  <circle cx="40" cy="20" r="6" fill="#eab308" />
+  <circle cx="60" cy="20" r="6" fill="#22c55e" />
+  
+  <!-- Sidebar -->
+  <rect x="0" y="40" width="200" height="410" fill="#1e293b" opacity="0.5" />
+  
+  <!-- Chat Panel -->
+  <rect x="550" y="40" width="250" height="410" fill="#1e293b" opacity="0.5" />
+  
+  <text x="400" y="225" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Editor View</text>
+  <text x="400" y="255" font-family="Arial" font-size="16" fill="#94a3b8" text-anchor="middle">with AI Chat Integration</text>
+  
+  <rect x="300" y="280" width="200" height="4" fill="url(#accent)" rx="2" />
+</svg>
