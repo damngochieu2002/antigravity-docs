@@ -3,6 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-link');
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
     const sections = document.querySelectorAll('.section');
+    const hamburger = document.querySelector('.hamburger');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+        });
+    }
 
     function showSection(sectionId) {
         sections.forEach(s => s.classList.remove('active'));
@@ -10,6 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (target) {
             target.classList.add('active');
             target.classList.add('animate-in');
+        }
+
+        // Close mobile menu
+        if (hamburger && hamburger.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navLinksContainer.classList.remove('active');
         }
 
         // Update active states
