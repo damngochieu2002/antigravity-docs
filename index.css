@@ -495,11 +495,7 @@ body::before {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     margin-bottom: 16px;
-    background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #a78bfa 70%, #06b6d4 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 25px rgba(167, 139, 250, 0.4));
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .section-subtitle {
