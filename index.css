@@ -507,6 +507,7 @@ body::before {
     font-size: 1.125rem;
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
 }
 
 /* Cards Grid */
