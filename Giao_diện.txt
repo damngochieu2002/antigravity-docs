@@ -1,0 +1,143 @@
+﻿GIAO DIỆN ANTIGRAVITY
+
+
+1. Hai chế độ giao diện chính
+Antigravity cung cấp 2 chế độ giao diện phù hợp với các tình huống làm việc khác nhau:
+Chế độ
+	Mục đích        
+	Khi nào dùng
+	Editor View
+	Tập trung viết code        
+	Khi bạn cần code trực tiếp, review từng thay đổi
+	Manager View
+	Quản lý nhiều task song song
+	Khi giao nhiều việc cho Agent chạy nền
+	
+
+2. Editor View (Chế độ Soạn thảo)
+Đây là giao diện mặc định, giống VS Code với panel AI Chat bên cạnh.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thành phần        
+	Vị trí
+	Chức năng
+	Explorer
+	Trái
+	Quản lý file/folder như VS Code
+	Editor Area
+	Giữa
+	Viết và xem code
+	AI Chat Panel
+	Phải
+	Giao tiếp với Agent
+	Terminal
+	Dưới
+	Chạy lệnh (Agent có thể tương tác)
+	
+
+3. Manager View (Chế độ Quản lý)
+Cách mở giao diện Manager view:
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Đây là điểm mạnh riêng của Antigravity so với các IDE khác. Cho phép bạn chạy nhiều Agent song song ở chế độ nền.
+  
+
+Lợi ích của Manager View:
+Lợi ích
+	Mô tả
+	Đa nhiệm
+	Giao Agent nhiều task cùng lúc, không cần chờ từng task hoàn thành
+	Tiết kiệm thời gian
+	Agent làm việc nền, bạn có thể làm việc khác
+	Theo dõi tổng quan
+	Xem trạng thái tất cả tasks một chỗ
+	Batch processing
+	Gom nhiều task tương tự để xử lý hàng loạt
+	
+
+Cách chuyển từ manager view về lại Editor view:
+Bước 1: Chọn Workspace (Folder) mà bạn muốn chỉnh sửa code.
+  
+
+Sau khi đã chọn được Workspace mới thì chọn Focus Editor.
+  
+  
+  
+
+4. So sánh Editor View vs Manager View
+Tiêu chí
+	Editor View
+	Manager View
+	Tập trung
+	1 task tại một thời điểm
+	Nhiều tasks song song
+	Kiểm soát
+	Cao - review từng bước
+	Trung bình - review khi task xong
+	Phù hợp
+	Code phức tạp, cần cẩn thận        
+	Tasks đơn giản, lặp lại
+	Tốc độ
+	Chậm hơn (chờ approve)
+	Nhanh hơn (chạy nền)

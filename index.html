@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity - Hướng Dẫn Sử Dụng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Animated Background Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <nav class="nav">
+        <div class="container nav-content">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                Antigravity
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-section="home"><span>Trang chủ</span></a>
+                <a href="#" class="nav-link" data-section="intro"><span>Giới thiệu</span></a>
+                <a href="#" class="nav-link" data-section="setting"><span>Cài đặt</span></a>
+                <a href="#" class="nav-link" data-section="security"><span>Bảo mật</span></a>
+                <a href="#" class="nav-link" data-section="interface"><span>Giao diện</span></a>
+                <a href="#" class="nav-link" data-section="rules"><span>Rules</span></a>
+                <a href="#" class="nav-link" data-section="skills"><span>Skills</span></a>
+                <a href="#" class="nav-link" data-section="workflows"><span>Workflows</span></a>
+                <a href="#" class="nav-link" data-section="tokens"><span>Token</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="section active">
+        <div class="hero">
+            <div class="container hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Smart Gift Solution Documentation
+                </div>
+                <h1>
+                    <span class="gradient-text">Antigravity</span> IDE
+                </h1>
+                <p>Hướng dẫn sử dụng toàn diện cho IDE thế hệ mới của Google với AI Agent tích hợp sẵn</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" data-navigate="intro">
+                        Bắt đầu ngay
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#" class="btn btn-secondary" data-navigate="rules">
+                        Hướng dẫn nâng cao
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nội dung</span>
+                <h2 class="section-title">Khám phá hướng dẫn</h2>
+                <p class="section-subtitle">Chọn phần bạn muốn tìm hiểu để bắt đầu</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">9</div>
+                    <div class="stat-label">Chủ đề hướng dẫn</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">626+</div>
+                    <div class="stat-label">Skills có sẵn</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">40+</div>
+                    <div class="stat-label">Workflows</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">AI Models</div>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card" onclick="document.querySelector('[data-section=intro]').click()">
+                    <div class="card-icon">📖</div>
+                    <h3>Giới thiệu chung</h3>
+                    <p>Tìm hiểu Antigravity là gì và khác biệt so với VS Code + ChatGPT</p>
+                </div>
+                <div class="card" onclick="document.querySelector('[data-section=setting]').click()">
+                    <div class="card-icon green">⚙️</div>
+                    <h3>Cài đặt & Setting</h3>
+                    <p>Hướng dẫn cài đặt và cấu hình công cụ từng bước</p>
+                </div>
+                <div class="card" onclick="document.querySelector('[data-section=security]').click()">
+                    <div class="card-icon pink">🔒</div>
+                    <h3>Bảo mật</h3>
+                    <p>Các thiết lập bảo mật bắt buộc và quy tắc vận hành</p>
+                </div>
+                <div class="card" onclick="document.querySelector('[data-section=interface]').click()">
+                    <div class="card-icon orange">🖥️</div>
+                    <h3>Giao diện</h3>
+                    <p>Editor View và Manager View - 2 chế độ làm việc chính</p>
+                </div>
+                <div class="card" onclick="document.querySelector('[data-section=rules]').click()">
+                    <div class="card-icon">📋</div>
+                    <h3>Rules</h3>
+                    <p>Global Rules và Workspace Rules để điều khiển Agent</p>
+                </div>
+                <div class="card" onclick="document.querySelector('[data-section=skills]').click()">
+                    <div class="card-icon green">🎯</div>
+                    <h3>Skills</h3>
+                    <p>626+ kỹ năng mở rộng cho AI Agent theo từng vai trò</p>
+                </div>
+                <div class="card" onclick="document.querySelector('[data-section=workflows]').click()">
+                    <div class="card-icon pink">🔄</div>
+                    <h3>Workflows</h3>
+                    <p>40+ quy trình tự động hóa các tác vụ lặp lại</p>
+                </div>
+                <div class="card" onclick="document.querySelector('[data-section=tokens]').click()">
+                    <div class="card-icon orange">💎</div>
+                    <h3>Quản lý Token</h3>
+                    <p>Kỹ thuật tiết kiệm token và chọn model phù hợp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section id="intro" class="section">
+        <div class="container">
+            <h2 class="section-title">Giới Thiệu Chung Về Antigravity</h2>
+            <p class="section-subtitle">IDE thế hệ mới của Google với AI Agent tích hợp</p>
+
+            <div class="content-block">
+                <h3>1. Antigravity là gì?</h3>
+                <p>Antigravity là IDE được thiết kế dựa trên nền tảng VS Code và tích hợp sẵn AI Agent có khả năng tự
+                    thực thi các tác vụ lập trình.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>2. Khác biệt so với VS Code + ChatGPT</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Cách làm cũ (VS Code + ChatGPT)</th>
+                            <th>Cách làm mới (Antigravity)</th>
+                        </tr>
+                        <tr>
+                            <td>Copy code từ ChatGPT → Paste vào VS Code</td>
+                            <td>Agent tự viết vào file</td>
+                        </tr>
+                        <tr>
+                            <td>Tự chạy lệnh terminal</td>
+                            <td>Agent tự chạy lệnh</td>
+                        </tr>
+                        <tr>
+                            <td>Tự tạo file, sửa file</td>
+                            <td>Agent tự tạo/sửa file</td>
+                        </tr>
+                        <tr>
+                            <td>Tab qua lại liên tục</td>
+                            <td>Một cửa sổ duy nhất</td>
+                        </tr>
+                        <tr>
+                            <td>ChatGPT không biết context project</td>
+                            <td>Agent thấy toàn bộ cấu trúc project</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>3. Agent có thể làm gì?</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Khả năng</th>
+                            <th>Ví dụ thực tế</th>
+                        </tr>
+                        <tr>
+                            <td>Viết code</td>
+                            <td>"Tạo API endpoint GET /users với pagination" → Agent viết code và tạo file</td>
+                        </tr>
+                        <tr>
+                            <td>Sửa code</td>
+                            <td>"Thêm validation cho field email" → Agent tìm file và sửa đúng chỗ</td>
+                        </tr>
+                        <tr>
+                            <td>Chạy terminal</td>
+                            <td>"Chạy npm install và build project" → Agent thực thi lệnh</td>
+                        </tr>
+                        <tr>
+                            <td>Debug</td>
+                            <td>"Tại sao lỗi này xảy ra?" → Agent phân tích stack trace</td>
+                        </tr>
+                        <tr>
+                            <td>Viết test</td>
+                            <td>"Viết unit test cho function này" → Agent tạo test file</td>
+                        </tr>
+                        <tr>
+                            <td>Refactor</td>
+                            <td>"Tách function này thành các hàm nhỏ hơn" → Agent refactor</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>4. Các khái niệm cơ bản</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Khái niệm</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Agent</strong></td>
+                            <td>Trợ lý AI tích hợp sẵn, bạn chat để yêu cầu làm việc</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Prompt</strong></td>
+                            <td>Câu lệnh/yêu cầu bạn gửi cho Agent</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Context</strong></td>
+                            <td>Thông tin về project mà Agent "nhìn thấy"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Approve/Reject</strong></td>
+                            <td>Bạn duyệt hoặc từ chối thay đổi của Agent</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rules</strong></td>
+                            <td>Quy tắc bạn đặt ra để Agent tuân theo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Skills</strong></td>
+                            <td>Bộ kỹ năng mở rộng cho Agent</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Workflows</strong></td>
+                            <td>Quy trình tự động hóa các tác vụ lặp lại</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>5. Khi nào nên dùng Antigravity?</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>✅ Nên dùng</th>
+                            <th>❌ Không nên dùng</th>
+                        </tr>
+                        <tr>
+                            <td>Viết code mới theo yêu cầu</td>
+                            <td>Xử lý dữ liệu nhạy cảm (PII, credentials)</td>
+                        </tr>
+                        <tr>
+                            <td>Debug và fix lỗi</td>
+                            <td>Các tác vụ cần 100% chính xác</td>
+                        </tr>
+                        <tr>
+                            <td>Refactor code cũ</td>
+                            <td>Làm việc với database Production</td>
+                        </tr>
+                        <tr>
+                            <td>Viết unit test</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tạo documentation</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Prototype nhanh</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SETTING -->
+    <section id="setting" class="section">
+        <div class="container">
+            <h2 class="section-title">Hướng Dẫn Cài Đặt & Setting</h2>
+
+            <div class="content-block">
+                <h3>1. Cài đặt</h3>
+                <p>Truy cập <a href="https://antigravity.google/download"
+                        style="color: var(--primary)">https://antigravity.google/download</a></p>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Hệ điều hành</th>
+                            <th>Phiên bản</th>
+                        </tr>
+                        <tr>
+                            <td>macOS</td>
+                            <td>Apple Silicon (M1, M2, M3, M4...) hoặc Intel</td>
+                        </tr>
+                        <tr>
+                            <td>Windows</td>
+                            <td>x64 (phổ biến) hoặc ARM64</td>
+                        </tr>
+                        <tr>
+                            <td>Linux</td>
+                            <td>Copy lệnh vào Terminal</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>2. Bước 1: Choose setup flow</h3>
+                <ul>
+                    <li><strong>Start fresh:</strong> Khuyên dùng cho người mới</li>
+                    <li><strong>Import from Cursor:</strong> Cho dev từng dùng Cursor, muốn giữ extensions</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>3. Bước 2: Choose editor theme</h3>
+                <p>Chọn theme phù hợp với sở thích</p>
+            </div>
+
+            <div class="content-block">
+                <h3>4. Bước 3: Chế độ vận hành Agent</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Chế độ</th>
+                            <th>Mô tả</th>
+                            <th>Phù hợp với</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Agent-driven</strong></td>
+                            <td>AI tự động làm mọi thứ</td>
+                            <td>Thực hiện trọn gói 1 tính năng</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agent-assisted</strong> ⭐</td>
+                            <td>AI đề xuất, bạn kiểm soát</td>
+                            <td>Công việc hàng ngày (KHUYÊN DÙNG)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Review-driven</strong></td>
+                            <td>AI hỏi mọi thứ trước khi làm</td>
+                            <td>Code nhạy cảm, cần an toàn cao</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custom</strong></td>
+                            <td>Tùy chỉnh từng quyền hạn</td>
+                            <td>Người dùng nâng cao</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>5. Bước 4: Configure Editor</h3>
+                <ul>
+                    <li><strong>Keybindings:</strong> Chọn Normal (chỉ chọn Vim nếu thành thạo)</li>
+                    <li><strong>Extensions:</strong> Tick để cài Python, Go, Java, C/C++, C#, PHP, Ruby</li>
+                </ul>
+                <div class="alert alert-info">
+                    <span class="alert-icon">💡</span>
+                    <div class="alert-content">
+                        <div class="alert-title">Lưu ý</div>
+                        <div class="alert-text">Không cài đủ extensions có thể ảnh hưởng đến hoạt động của Agent</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>6. Bước 5 & 6: Đăng nhập</h3>
+                <ul>
+                    <li>Sử dụng <strong>email công ty</strong> để đăng nhập</li>
+                    <li>Đồng ý với Terms of Use</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section id="security" class="section">
+        <div class="container">
+            <h2 class="section-title">Lưu Ý Đặc Biệt Về Bảo Mật</h2>
+
+            <div class="alert alert-danger">
+                <span class="alert-icon">🚨</span>
+                <div class="alert-content">
+                    <div class="alert-title">⚠️ Cảnh báo quan trọng</div>
+                    <div class="alert-text">Google thu thập dữ liệu chat, code để huấn luyện AI. Có nguy cơ rò rỉ dữ
+                        liệu. <strong>Tuyệt đối tránh xử lý dữ liệu nhạy cảm!</strong></div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Thiết lập bắt buộc</h3>
+
+                <h4 style="margin: 20px 0 10px; color: var(--secondary)">Tab Agent - Security & Review</h4>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Setting</th>
+                            <th>Giá trị</th>
+                            <th>Bắt buộc</th>
+                        </tr>
+                        <tr>
+                            <td>Secure Mode</td>
+                            <td>✅ BẬT (ON)</td>
+                            <td><span class="badge badge-required">BẮT BUỘC</span></td>
+                        </tr>
+                        <tr>
+                            <td>Review Policy</td>
+                            <td>Request Review</td>
+                            <td><span class="badge badge-recommended">Khuyến nghị</span></td>
+                        </tr>
+                        <tr>
+                            <td>Terminal Command Auto Execution</td>
+                            <td>Request Review</td>
+                            <td><span class="badge badge-recommended">Khuyến nghị</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h4 style="margin: 20px 0 10px; color: var(--secondary)">Tab Agent - File Access</h4>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Setting</th>
+                            <th>Giá trị</th>
+                            <th>Bắt buộc</th>
+                        </tr>
+                        <tr>
+                            <td>Agent Gitignore Access</td>
+                            <td>❌ TẮT (OFF)</td>
+                            <td><span class="badge badge-required">BẮT BUỘC</span></td>
+                        </tr>
+                        <tr>
+                            <td>Agent Non-Workspace File Access</td>
+                            <td>❌ TẮT (OFF)</td>
+                            <td><span class="badge badge-required">BẮT BUỘC</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h4 style="margin: 20px 0 10px; color: var(--secondary)">Deny List Commands</h4>
+                <p>Thêm các lệnh nguy hiểm vào danh sách cấm:</p>
+                <pre><code>rm -rf
+chmod 777
+sudo rm
+git push --force
+DROP DATABASE</code></pre>
+
+                <h4 style="margin: 20px 0 10px; color: var(--secondary)">Tab Browser & Account</h4>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Setting</th>
+                            <th>Giá trị</th>
+                            <th>Bắt buộc</th>
+                        </tr>
+                        <tr>
+                            <td>Browser Javascript Execution</td>
+                            <td>Disabled</td>
+                            <td><span class="badge badge-required">BẮT BUỘC</span></td>
+                        </tr>
+                        <tr>
+                            <td>Clipboard Context</td>
+                            <td>❌ TẮT</td>
+                            <td><span class="badge badge-required">BẮT BUỘC</span></td>
+                        </tr>
+                        <tr>
+                            <td>Enable Telemetry</td>
+                            <td>❌ TẮT</td>
+                            <td><span class="badge badge-required">BẮT BUỘC</span></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>Dùng email công ty (@smartgift.vn)</td>
+                            <td><span class="badge badge-required">BẮT BUỘC</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Quy tắc vận hành: 3 KHÔNG - 2 PHẢI</h3>
+                <div class="cards-grid" style="margin-top: 20px">
+                    <div class="card" style="border-color: #ef4444">
+                        <h4 style="color: #ef4444">❌ 3 KHÔNG</h4>
+                        <ul>
+                            <li>Không nhập Secrets (API Keys, passwords, PII)</li>
+                            <li>Không chạy lệnh "mù" - đọc kỹ trước khi Approve</li>
+                            <li>Không phó mặc - không copy code vào Production</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="border-color: #10b981">
+                        <h4 style="color: #10b981">✅ 2 PHẢI</h4>
+                        <ul>
+                            <li>Phải Review Code trước khi chấp nhận</li>
+                            <li>Phải dùng .gitignore để chặn file nhạy cảm (.env)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-warning">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <div class="alert-title">Thông điệp cốt lõi</div>
+                    <div class="alert-text">Antigravity chỉ là công cụ hỗ trợ. Kỹ sư Smart Gift Solution chịu trách
+                        nhiệm cuối cùng về chất lượng và bảo mật sản phẩm.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERFACE -->
+    <section id="interface" class="section">
+        <div class="container">
+            <h2 class="section-title">Giao Diện Antigravity</h2>
+
+            <div class="content-block">
+                <h3>Hai chế độ giao diện chính</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Chế độ</th>
+                            <th>Mục đích</th>
+                            <th>Khi nào dùng</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Editor View</strong></td>
+                            <td>Tập trung viết code</td>
+                            <td>Khi cần code trực tiếp, review từng thay đổi</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Manager View</strong></td>
+                            <td>Quản lý nhiều task song song</td>
+                            <td>Khi giao nhiều việc cho Agent chạy nền</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Editor View (Chế độ Soạn thảo)</h3>
+                <p>Giao diện mặc định, giống VS Code với panel AI Chat bên cạnh.</p>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Thành phần</th>
+                            <th>Vị trí</th>
+                            <th>Chức năng</th>
+                        </tr>
+                        <tr>
+                            <td>Explorer</td>
+                            <td>Trái</td>
+                            <td>Quản lý file/folder như VS Code</td>
+                        </tr>
+                        <tr>
+                            <td>Editor Area</td>
+                            <td>Giữa</td>
+                            <td>Viết và xem code</td>
+                        </tr>
+                        <tr>
+                            <td>AI Chat Panel</td>
+                            <td>Phải</td>
+                            <td>Giao tiếp với Agent</td>
+                        </tr>
+                        <tr>
+                            <td>Terminal</td>
+                            <td>Dưới</td>
+                            <td>Chạy lệnh (Agent có thể tương tác)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Manager View (Chế độ Quản lý)</h3>
+                <p>Điểm mạnh riêng của Antigravity - cho phép chạy nhiều Agent song song ở chế độ nền.</p>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Lợi ích</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td>Đa nhiệm</td>
+                            <td>Giao Agent nhiều task cùng lúc</td>
+                        </tr>
+                        <tr>
+                            <td>Tiết kiệm thời gian</td>
+                            <td>Agent làm việc nền, bạn có thể làm việc khác</td>
+                        </tr>
+                        <tr>
+                            <td>Theo dõi tổng quan</td>
+                            <td>Xem trạng thái tất cả tasks một chỗ</td>
+                        </tr>
+                        <tr>
+                            <td>Batch processing</td>
+                            <td>Gom nhiều task tương tự xử lý hàng loạt</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>So sánh Editor View vs Manager View</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Tiêu chí</th>
+                            <th>Editor View</th>
+                            <th>Manager View</th>
+                        </tr>
+                        <tr>
+                            <td>Tập trung</td>
+                            <td>1 task tại một thời điểm</td>
+                            <td>Nhiều tasks song song</td>
+                        </tr>
+                        <tr>
+                            <td>Kiểm soát</td>
+                            <td>Cao - review từng bước</td>
+                            <td>Trung bình - review khi task xong</td>
+                        </tr>
+                        <tr>
+                            <td>Phù hợp</td>
+                            <td>Code phức tạp, cần cẩn thận</td>
+                            <td>Tasks đơn giản, lặp lại</td>
+                        </tr>
+                        <tr>
+                            <td>Tốc độ</td>
+                            <td>Chậm hơn (chờ approve)</td>
+                            <td>Nhanh hơn (chạy nền)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RULES -->
+    <section id="rules" class="section">
+        <div class="container">
+            <h2 class="section-title">Rules - Quy Tắc Cho Agent</h2>
+            <p class="section-subtitle">Điều khiển hành vi của AI Agent theo quy chuẩn của team</p>
+
+            <div class="content-block">
+                <h3>PHẦN 1: Global Rules</h3>
+                <p>Global Rules là bộ quy tắc nền tảng, đóng vai trò như "Hiến pháp" của team. Áp dụng cho <strong>tất
+                        cả các Workspace</strong> trên máy tính.</p>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Giá trị</th>
+                        </tr>
+                        <tr>
+                            <td>Vị trí (macOS/Linux)</td>
+                            <td><code>~/.gemini/GEMINI.md</code></td>
+                        </tr>
+                        <tr>
+                            <td>Vị trí (Windows)</td>
+                            <td><code>%USERPROFILE%\.gemini\GEMINI.md</code></td>
+                        </tr>
+                        <tr>
+                            <td>Commit lên Git?</td>
+                            <td>❌ Không (chỉ nằm trên máy cá nhân)</td>
+                        </tr>
+                    </table>
+                </div>
+                <h4 style="margin: 20px 0 10px">Hướng dẫn thiết lập:</h4>
+                <ol>
+                    <li>Mở panel Customizations (dấu <code>...</code> góc trên Agent panel)</li>
+                    <li>Chuyển sang tab Customizations</li>
+                    <li>Nhấp <code>+ Global</code> để tạo Global rules</li>
+                    <li>Copy và dán nội dung tiêu chuẩn của công ty</li>
+                </ol>
+            </div>
+
+            <div class="content-block">
+                <h3>PHẦN 2: Workspace Rules</h3>
+                <p>Workspace Rules là bộ quy tắc riêng cho từng project. Override Global Rules nếu có conflict.</p>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Global Rules</th>
+                            <th>Workspace Rules</th>
+                        </tr>
+                        <tr>
+                            <td>Phạm vi</td>
+                            <td>Tất cả projects</td>
+                            <td>Chỉ project hiện tại</td>
+                        </tr>
+                        <tr>
+                            <td>Vị trí</td>
+                            <td><code>~/.gemini/GEMINI.md</code></td>
+                            <td><code>[project]/.gemini/GEMINI.md</code></td>
+                        </tr>
+                        <tr>
+                            <td>Commit lên Git?</td>
+                            <td>❌ Không</td>
+                            <td>✅ Có thể (tùy team)</td>
+                        </tr>
+                        <tr>
+                            <td>Ưu tiên</td>
+                            <td>Thấp hơn</td>
+                            <td>Cao hơn (override Global)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Khi nào cần Workspace Rules?</h3>
+                <ul>
+                    <li>Project dùng tech stack khác team (VD: NestJS thay vì Laravel)</li>
+                    <li>Quy tắc code riêng của project (naming convention đặc biệt)</li>
+                    <li>Thông tin context của project ("Đây là microservice xử lý payment")</li>
+                    <li>Các file/folder cần ignore ("Không sửa code trong /legacy")</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills - Kỹ Năng Mở Rộng</h2>
+            <p class="section-subtitle">626+ skills sẵn sàng sử dụng từ kho community</p>
+
+            <div class="content-block">
+                <h3>Skills là gì?</h3>
+                <p>Skills là các "kỹ năng" mở rộng giúp AI Agent thực hiện tốt hơn trong các lĩnh vực chuyên biệt.</p>
+                <h4 style="margin: 20px 0 10px">Cài đặt:</h4>
+                <pre><code># Cài vào thư mục HOME (Khuyến nghị)
+npx antigravity-awesome-skills
+
+# Hoặc cài cho Gemini
+npx antigravity-awesome-skills --gemini</code></pre>
+                <h4 style="margin: 20px 0 10px">Sử dụng:</h4>
+                <pre><code>"Use the @brainstorming skill to help me plan a SaaS."
+"Sử dụng skill @lint-and-validate"</code></pre>
+            </div>
+
+            <div class="content-block">
+                <h3>Essential Starter Pack (Tất cả dev nên cài)</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Mô tả</th>
+                        </tr>
+                        <tr>
+                            <td><code>concise-planning</code></td>
+                            <td>Luôn bắt đầu với kế hoạch</td>
+                        </tr>
+                        <tr>
+                            <td><code>lint-and-validate</code></td>
+                            <td>Tự động giữ code sạch</td>
+                        </tr>
+                        <tr>
+                            <td><code>git-pushing</code></td>
+                            <td>Lưu work an toàn</td>
+                        </tr>
+                        <tr>
+                            <td><code>kaizen</code></td>
+                            <td>Mindset cải tiến liên tục</td>
+                        </tr>
+                        <tr>
+                            <td><code>systematic-debugging</code></td>
+                            <td>Debug như chuyên gia</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Backend (PHP/Laravel)</h3>
+                    <p>senior-fullstack, api-patterns, database-design, sql-pro, postgres-best-practices,
+                        auth-implementation-patterns</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🦫</div>
+                    <h3>Backend (Golang)</h3>
+                    <p>golang-pro, go-concurrency-patterns, memory-safety-patterns, microservices-patterns</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Frontend (Vue.js)</h3>
+                    <p>frontend-design, tailwind-patterns, ui-ux-pro-max, form-cro, seo-audit, typescript-expert</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Mobile (React)</h3>
+                    <p>react-best-practices, react-patterns, mobile-developer, react-native-architecture</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>DevOps</h3>
+                    <p>docker-expert, aws-serverless, kubernetes-architect, terraform-specialist, bash-linux</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Security</h3>
+                    <p>security-auditor, vulnerability-scanner, top-web-vulnerabilities, pci-compliance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKFLOWS -->
+    <section id="workflows" class="section">
+        <div class="container">
+            <h2 class="section-title">Workflows - Quy Trình Tự Động</h2>
+            <p class="section-subtitle">40+ workflows sẵn có để tự động hóa các tác vụ lặp lại</p>
+
+            <div class="content-block">
+                <h3>Cài đặt Workflows</h3>
+                <p>Workflows được cài <strong>vào từng project</strong>, không phải global.</p>
+                <pre><code># Cài cơ bản (khuyến nghị cho tất cả dev)
+npx antigravity-workflows install git-commit git-pr code-review
+
+# Cho Backend Developer
+npx antigravity-workflows install git-commit new-api unit-test db-schema
+
+# Cho Frontend Developer
+npx antigravity-workflows install git-commit new-component e2e-test
+
+# Cho DevOps
+npx antigravity-workflows install git-commit docker ci-cd deploy</code></pre>
+                <h4 style="margin: 20px 0 10px">Sử dụng:</h4>
+                <pre><code>/git-commit    → Agent giúp commit code đúng chuẩn
+/unit-test     → Agent viết unit test
+/deploy        → Agent hướng dẫn deploy từng bước</code></pre>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Development</h3>
+                    <p><code>new-project</code>, <code>new-component</code>, <code>new-api</code>,
+                        <code>new-feature</code>, <code>refactor</code>, <code>migrate</code>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Git & Collaboration</h3>
+                    <p><code>git-commit</code>, <code>git-pr</code>, <code>git-conflict</code>, <code>git-rebase</code>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Testing & Quality</h3>
+                    <p><code>unit-test</code>, <code>e2e-test</code>, <code>playwright-test</code>,
+                        <code>code-review</code>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Debugging</h3>
+                    <p><code>debug-error</code>, <code>debug-log</code>, <code>performance</code></p>
+                </div>
+                <div class="card">
+                    <h3>Documentation</h3>
+                    <p><code>readme</code>, <code>api-docs</code>, <code>architecture</code></p>
+                </div>
+                <div class="card">
+                    <h3>Deployment</h3>
+                    <p><code>deploy</code>, <code>docker</code>, <code>ci-cd</code>, <code>railway-deploy</code>,
+                        <code>vercel-deploy</code>
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>Tự tạo Workflow</h3>
+                <p>Workflows có sẵn thường quá generic. Yêu cầu Agent tạo workflow phù hợp với tech stack của team:</p>
+                <pre><code>Tạo workflow tên là "new-laravel-api" với các đặc điểm sau:
+Mục đích: Tạo API CRUD endpoint trong Laravel
+Tech stack: Laravel 10, PHP 8.2, MySQL
+Các bước:
+1. Hỏi tên resource (Product, Order, etc.)
+2. Tạo migration trong database/migrations
+3. Tạo Model trong app/Models
+4. Tạo Controller trong app/Http/Controllers/Api
+5. Thêm route vào routes/api.php
+6. Viết test case</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOKENS -->
+    <section id="tokens" class="section">
+        <div class="container">
+            <h2 class="section-title">Quản Lý Token Hiệu Quả</h2>
+            <p class="section-subtitle">Kỹ thuật tiết kiệm token và chiến lược chọn model</p>
+
+            <div class="content-block">
+                <h3>1. Tối ưu hóa Đầu vào (Prompting)</h3>
+                <ul>
+                    <li><strong>Ngôn ngữ:</strong> Ưu tiên dùng Tiếng Anh. Nếu dùng tiếng Việt, viết gãy gọn</li>
+                    <li><strong>Văn phong:</strong> Bỏ xã giao ("Please"), dùng câu mệnh lệnh trực tiếp</li>
+                    <li><strong>Cấu trúc:</strong> Dùng dấu phân cách (###, """, XML tags)</li>
+                    <li><strong>Nén:</strong> Dùng từ viết tắt ngành (HR, API, FE, BE)</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>2. Tối ưu hóa Context (Quan trọng nhất)</h3>
+                <ul>
+                    <li><strong>Code:</strong> Chỉ gửi đoạn code liên quan, không gửi cả file</li>
+                    <li><strong>Minify:</strong> Xóa khoảng trắng và comment thừa</li>
+                    <li><strong>Lịch sử chat:</strong> Yêu cầu model tóm tắt, mở chat mới</li>
+                    <li><strong>Caching:</strong> Tận dụng Context Caching cho tài liệu lớn</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>3. Chiến lược chọn Model</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Nhóm</th>
+                            <th>Model</th>
+                            <th>Dùng khi</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>Nhanh & Tiết kiệm</strong></td>
+                            <td>Gemini 3 Flash</td>
+                            <td>Debug, sửa lỗi nhanh, prototyping</td>
+                        </tr>
+                        <tr>
+                            <td>Gemini 3 Pro (Low)</td>
+                            <td>Code hàng ngày, độ khó trung bình</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>Tư duy & Tài liệu</strong></td>
+                            <td>Claude Sonnet 4.5</td>
+                            <td>Viết docs, review code chi tiết</td>
+                        </tr>
+                        <tr>
+                            <td>Claude Sonnet 4.5 (Thinking)</td>
+                            <td>Dự án dài hơi, refactor, test suite</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><strong>Chuyên sâu & Phức tạp</strong></td>
+                            <td>Gemini 3 Pro (High)</td>
+                            <td>Thiết kế hệ thống, thay đổi kiến trúc</td>
+                        </tr>
+                        <tr>
+                            <td>Claude Opus 4.5 (Thinking)</td>
+                            <td>Khi Sonnet thất bại, repo khổng lồ</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>4. Mẹo quản lý Quota</h3>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h4>🎯 Đúng người đúng việc</h4>
+                        <p>Không dùng Opus/Pro High để đổi tên biến</p>
+                    </div>
+                    <div class="card">
+                        <h4>3️⃣ Quy tắc "Tam quá"</h4>
+                        <p>Nếu model thất bại 3 lần, đổi sang model mạnh hơn</p>
+                    </div>
+                    <div class="card">
+                        <h4>📦 Gom việc (Batching)</h4>
+                        <p>Gom các task tương tự vào một lần hỏi</p>
+                    </div>
+                    <div class="card">
+                        <h4>⚡ Manager View</h4>
+                        <p>Dùng chế độ chạy nền thay vì chat qua lại</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3>5. Ví dụ Prompt tốt</h3>
+                <h4 style="margin: 20px 0 10px; color: var(--secondary)">Vue Component</h4>
+                <pre><code>### TASK
+Create Vue 3 ProductList component
+
+### TECH STACK
+- Vue 3 + Composition API + TypeScript
+- Pinia, TailwindCSS, Axios
+
+### REQUIREMENTS
+1. Fetch products from /api/v1/products
+2. Display grid (3 cols desktop, 2 tablet, 1 mobile)
+3. Loading skeleton, Empty state, Error state
+4. Infinite scroll pagination
+
+### OUTPUT
+Single file component. TypeScript strict. No explanation.</code></pre>
+
+                <h4 style="margin: 20px 0 10px; color: var(--secondary)">Debug & Fix</h4>
+                <pre><code>### CONTEXT
+Laravel 10, PHP 8.2, MySQL 8.0
+
+### ERROR
+SQLSTATE[23000]: Integrity constraint violation: 
+1048 Column 'user_id' cannot be null
+at app/Services/OrderService.php:45
+
+### RELEVANT CODE
+[chỉ paste phần code liên quan]</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

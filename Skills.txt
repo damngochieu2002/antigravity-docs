@@ -1,0 +1,255 @@
+﻿SKILLS
+1. Skills là gì?
+Skills là các "kỹ năng" mở rộng giúp AI Agent thực hiện tốt hơn trong các lĩnh vực chuyên biệt. Repo https://github.com/sickn33/antigravity-awesome-skills cung cấp 626+ skills sẵn sàng sử dụng.
+2. Hướng dẫn cài đặt
+Vị trí lưu trữ: 
+* macOS/Linux: ~/.agent/skills hoặc ~/.gemini/skills
+* Windows: %USERPROFILE%\.agent\skills hoặc %USERPROFILE%\.gemini\skills
+Cách 1: Cài vào thư mục HOME (Khuyến nghị - không ảnh hưởng project)
+npx antigravity-awesome-skills
+# Skills sẽ được cài vào ~/.agent/skills (ngoài project)
+# Git KHÔNG phát hiện, KHÔNG cần chỉnh .gitignore
+Cách 2: Cài cho từng tool cụ thể
+npx antigravity-awesome-skills --gemini   # → ~/.gemini/skills
+Cách 3: Clone vào project (cần thêm vào .gitignore)
+git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
+echo ".agent/" >> .gitignore
+3. Cách sử dụng Skills
+Sau khi cài, nếu muốn sử dụng skill brainstorming trong chat với agent, có thể nhắn: "Use the @brainstorming skill to help me plan a SaaS."
+Hoặc muốn sử dụng skill lint-and-validate, có thể nhắn:"sử dụng skill @lint-and-validate.”
+4. Danh sách Skill theo vai trò
+
+
+ESSENTIAL STARTER PACK (Tất cả dev nên cài)
+Skill
+	Mô tả
+	concise-planning
+	Luôn bắt đầu với kế hoạch
+	lint-and-validate
+	Tự động giữ code sạch
+	git-pushing
+	Lưu work an toàn
+	kaizen
+	Mindset cải tiến liên tục
+	systematic-debugging
+	Debug như chuyên gia
+	
+
+
+
+
+
+BACKEND DEVELOPER (PHP/Laravel)
+Skill
+	Mô tả
+	senior-fullstack
+	Hướng dẫn fullstack development toàn diện
+	backend-dev-guidelines
+	Patterns cho Node.js/Express/TypeScript
+	api-patterns
+	Hướng dẫn chọn REST vs GraphQL vs tRPC
+	database-design
+	Schema design và ORM selection
+	sql-pro
+	Modern SQL với cloud-native databases
+	postgres-best-practices
+	Tối ưu PostgreSQL
+	api-security-best-practices
+	Secure API design patterns
+	auth-implementation-patterns
+	JWT, OAuth2, session management
+	backend-security-coder
+	Secure backend coding practices
+	
+
+
+
+
+
+BACKEND DEVELOPER (Golang)
+Skill
+	Mô tả
+	golang-pro
+	Go development expertise
+	go-concurrency-patterns
+	Go concurrency mastery
+	memory-safety-patterns
+	Memory-safe programming
+	microservices-patterns
+	Microservices architecture
+	api-patterns
+	REST vs GraphQL vs tRPC selection
+	
+
+
+
+
+
+FRONTEND DEVELOPER (Vue.js)
+Skill
+	Mô tả
+	frontend-design
+	UI guidelines và aesthetics
+	frontend-developer
+	React 19+ và Next.js 15+ expertise (áp dụng cho Vue)
+	tailwind-patterns
+	Tailwind CSS v4 styling
+	ui-ux-pro-max
+	Premium design systems và tokens
+	form-cro
+	Optimize forms cho conversion
+	seo-audit
+	SEO optimization
+	mobile-design
+	Mobile-first design principles
+	typescript-expert
+	TypeScript mastery
+	frontend-security-coder
+	XSS prevention và client-side security
+	
+
+
+
+
+
+MOBILE DEVELOPER (React - Zalo Miniapp)
+Skill
+	Mô tả
+	react-best-practices
+	React performance optimization
+	react-patterns
+	Modern React patterns
+	mobile-developer
+	Cross-platform mobile development
+	react-native-architecture
+	React Native với Expo
+	app-store-optimization
+	ASO cho App Store và Play Store
+	
+
+
+
+
+
+DEVOPS / INFRASTRUCTURE
+Skill
+	Mô tả
+	docker-expert
+	Master containers và multi-stage builds
+	aws-serverless
+	Serverless trên AWS (Lambda, DynamoDB)
+	kubernetes-architect
+	K8s architecture và GitOps
+	terraform-specialist
+	Infrastructure as Code mastery
+	environment-setup-guide
+	Standardization cho teams
+	deployment-procedures
+	Safe rollout strategies
+	bash-linux
+	Terminal wizardry
+	observability-engineer
+	Comprehensive monitoring systems
+	incident-responder
+	Rapid incident response
+	performance-engineer
+	Application performance optimization
+	
+
+
+
+SECURITY / CODE REVIEW
+Skill
+	Mô tả
+	security-auditor
+	Comprehensive security audits
+	vulnerability-scanner
+	Advanced vulnerability analysis
+	top-web-vulnerabilities
+	OWASP-aligned vulnerability taxonomy
+	api-security-best-practices
+	Secure API design
+	pci-compliance
+	Payment card security standards
+	cc-skill-security-review
+	Security checklist for features
+	code-review-checklist
+	Catch bugs trong PRs
+	
+
+
+
+
+
+QA / TESTING
+Skill
+	Mô tả
+	test-driven-development
+	Red, Green, Refactor
+	systematic-debugging
+	Debug như Sherlock Holmes
+	browser-automation
+	E2E testing với Playwright
+	e2e-testing-patterns
+	Reliable E2E test suites
+	ab-test-setup
+	Validated experiments
+	test-fixing
+	Fix failing tests systematically
+	
+
+
+
+TECH LEAD / ARCHITECT
+Skill
+	Mô tả
+	senior-architect
+	Comprehensive software architecture
+	architecture-patterns
+	Clean Architecture, DDD, Hexagonal
+	microservices-patterns
+	Microservices architecture
+	event-sourcing-architect
+	Event sourcing và CQRS
+	architecture-decision-records
+	Document technical decisions
+	database-architect
+	Database design from scratch
+	
+
+AI / LLM DEVELOPMENT
+Skill
+	Mô tả
+	prompt-engineering
+	Master the art of talking to LLMs
+	rag-engineer
+	Build RAG systems với vector search
+	ai-agents-architect
+	Design autonomous AI agents
+	llm-app-patterns
+	Production-ready LLM patterns
+	mcp-builder
+	Create your own MCP tools
+	langfuse
+	LLM observability và tracing
+	
+
+
+
+
+
+
+
+DATA / ANALYTICS
+Skill
+	Mô tả
+	analytics-tracking
+	Set up GA4/PostHog correctly
+	sql-pro
+	Modern SQL
+	postgres-best-practices
+	Postgres optimization
+	data-engineer
+	Data pipeline architecture
+	database-architect
+	Database design from scratch

@@ -1,0 +1,132 @@
+﻿HƯỚNG DẪN CÀI ĐẶT VÀ SETTING CÔNG CỤ ANTIGRAVITY
+
+
+1. Cài đặt
+Để cài đặt, truy cập đường dẫn https://antigravity.google/download và lựa chọn phiên bản phù hợp với hệ điều hành đang sử dụng theo hướng dẫn chi tiết dưới đây:
+1. Hệ điều hành macOS
+* Download for Apple Silicon: Dành cho các dòng máy Mac thế hệ mới sử dụng chip Apple (M1, M2, M3, M4...).
+* Download for Intel: Dành cho các dòng máy Mac sử dụng vi xử lý Intel.
+2. Hệ điều hành Windows
+* Download for x64: Phù hợp với đại đa số các dòng máy tính bàn và laptop sử dụng chip Intel hoặc AMD.
+Yêu cầu hệ thống: Windows 10 (64-bit) trở lên.
+* Download for ARM64: Chỉ sử dụng cho các thiết bị chạy chip cấu trúc ARM.
+3. Hệ điều hành Linux
+Chỉ cần thực hiện thao tác Copy và Paste các đoạn mã vào cửa sổ Terminal.
+2. Setting
+1. Bước 1: Choose setup flow
+* Start fresh (Bắt đầu mới): Khuyên dùng cho người mới lần đầu sử dụng Antigravity.
+* Import from Cursor (Nhập dữ liệu từ Cursor): Khuyên dùng cho team Dev trước đây từng dùng Cursor, có nhiều phím tắt, hay extensions muốn giữ lại.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   2. Bước 2: Choose an editor theme type
+Chọn theme phù hợp với bạn.
+
+
+   3. Bước 3: How do you want to use the Antigravity agent
+   * Các chế độ vận hành (Cột bên trái)
+   * Agent-driven development (Phát triển do Agent dẫn dắt): Trao quyền tối đa cho AI (tự động làm mọi thứ mà không hỏi bạn nhiều), phù hợp khi thực hiện trọn gói 1 tính năng hoặc bạn đóng vai trò người review cuối.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      * Agent-assisted development (Phát triển có Agent hỗ trợ) - KHUYÊN DÙNG: AI sẽ đề xuất code và thực hiện tác vụ phụ trợ, nhưng quyền kiểm soát chính vẫn nằm trong tay bạn.
+      * Review-driven development (Phát triển dựa trên phê duyệt): Chế độ an toàn cao, AI sẽ hỏi mọi thức trước khi thực hiện bất cứ thay đổi nào.
+      * Custom configuration (Cấu hình tùy chỉnh): Dành cho người dùng nâng cao muốn thiết lập từng quyền hạn cụ thể.
+      * Các chính sách chi tiết (Cột bên phải)
+Khi bạn chọn một chế độ bên trái, các thông số bên phải sẽ thay đổi theo. Tuy nhiên, bạn cần hiểu ý nghĩa của chúng:
+      * Terminal execution policy (Chính sách thực thi lệnh):
+Auto: Cho phép Agent tự động chạy các lệnh thông thường (như npm install, ls, git status).
+Manual: Bắt buộc người dùng phải nhấn nút "Chạy" thì lệnh mới được thực thi.
+      * Review policy (Chính sách phê duyệt):
+Agent Decides: Agent tự đánh giá độ rủi ro. Nếu thấy an toàn, nó tự làm; nếu thấy nguy hiểm (như xóa file), nó sẽ hỏi bạn.
+Always Review: Luôn luôn hỏi ý kiến bạn trước mọi hành động.
+      * JavaScript execution policy: Quy định việc Agent có được phép chạy mã JavaScript trong trình duyệt (Browser) để kiểm thử giao diện web hay không.
+      * Checkbox "Use the default allowlist for the browser": Nên tích chọn để bảo vệ máy tính, chỉ cho phép Agent truy cập vào các trang web an toàn mặc định.
+      4. Bước 4: Cấu hình Trình soạn thảo (Configure Your Editor)
+Keybindings: Chọn Normal. (Chỉ chọn Vim nếu bạn đã thành thạo các phím tắt của Vim).
+Extensions: (khuyến khích tick) Bạn có thể tick để Antigravity tự tải 7 extensions gồm Python, Go, Java, C/C++, C#, PHP và Ruby hoặc là bỏ tick để chọn từng extension. 
+Lưu ý:  Việc không cài đủ các extensions có thể ảnh hưởng đến quá trình hoạt động của các agent của Antigravity.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      5. Bước 5: Đăng nhập (Sign into Google)
+Để đảm bảo an toàn dữ liệu và tuân thủ chính sách bảo mật thông tin của công ty, các bạn vui lòng sử dụng mail công ty để đăng nhập.
+      6. Bước 6: Terms of Use
+Bạn bắt buộc phải đồng ý với các điều khoản người dùng của Antigravity thì mới được cài đặt và sử dụng phần mềm.

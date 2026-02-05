@@ -1,0 +1,107 @@
+﻿LƯU Ý ĐẶC BIỆT VỀ BẢO MẬT DỮ LIỆU
+
+
+1. Cảnh báo rủi ro & Chính sách dữ liệu
+* Thực trạng: Google thu thập dữ liệu chat, code và thao tác để huấn luyện AI.
+* Rủi ro: Có nguy cơ rò rỉ dữ liệu (data exfiltration) và thực thi mã độc.
+* Yêu cầu: Tuyệt đối tránh xử lý dữ liệu nhạy cảm trên công cụ này.
+* Tham khảo: https://antigravity.google/terms
+2. Thiết lập bắt buộc (Ngay khi mở phần mềm)
+2.1. Tab Agent - Security & Review
+Mở Settings và cấu hình theo hướng dẫn dưới đây:
+Setting
+	Đường dẫn        
+	Giá trị        
+	Bắt buộc
+	Secure Mode
+	Agent → Security
+	✅ BẬT (ON)
+	✅ BẮT BUỘC
+	Review Policy
+	Agent → Artifact
+	Request Review
+	Khuyến nghị
+	Terminal Command Auto Execution
+	Agent → Terminal
+	Request Review
+	Khuyến nghị
+	
+
+2.2. Tab Agent - File Access
+Setting
+	Đường dẫn        
+	Giá trị        
+	Bắt buộc
+	Agent Gitignore Access        
+	Agent → File Access
+	❌ TẮT (OFF)
+	✅ BẮT BUỘC
+	Agent Non-Workspace File Access
+	Agent → File Access
+	❌ TẮT (OFF)
+	✅ BẮT BUỘC
+	
+
+2.3. Tab Agent - Deny List Commands
+Vào Deny List Terminal Commands → Click +Add và thêm các lệnh nguy hiểm:
+rm -rf
+chmod 777
+sudo rm
+git push --force
+DROP DATABASE
+2.4. Tab Browser
+Setting
+	Đường dẫn        
+	Giá trị        
+	Bắt buộc
+	Browser Javascript Execution Policy
+	Browser
+	Disabled
+	✅ BẮT BUỘC
+	Browser URL Allowlist
+	Browser → Allowlist
+	Chỉ thêm URL nội bộ
+	Khuyến nghị
+	2.5. Tab Tab
+Setting
+	Đường dẫn        
+	Giá trị        
+	Bắt buộc
+	Clipboard Context
+	Tab → Context
+	❌ TẮT (OFF)        
+	✅ BẮT BUỘC
+	Tab Gitignore Access
+	Tab → Context
+	❌ TẮT (OFF)        
+	✅ BẮT BUỘC
+	
+
+2.6. Tab Account
+Setting
+	Đường dẫn        
+	Giá trị        
+	Bắt buộc
+	Enable Telemetry
+	Account
+	❌ TẮT (OFF)        
+	✅ BẮT BUỘC
+	Email
+	Account        
+	Dùng email công ty (@smartgift.vn)
+	✅ BẮT BUỘC
+	3. Xử lý sự cố khi lỡ leak thông tin
+Nếu lỡ paste thông tin nhạy cảm vào chat:
+* Đóng conversation ngay lập tức.
+* Rotate/đổi credentials đã bị lộ.
+* Báo cáo với Team Lead trong vòng 24h.
+* Kiểm tra git history nếu đã commit (git log, git diff).
+4. Quy tắc vận hành (3 KHÔNG - 2 PHẢI)
+3 KHÔNG:
+* Không nhập Secrets: Tuyệt đối không paste mật khẩu, API Keys, Private Keys, hoặc thông tin khách hàng (PII).
+* Không chạy lệnh "mù": Phải đọc kỹ lệnh Terminal do AI gợi ý trước khi Approve/Run.
+* Không phó mặc: Không copy-paste code vào Production mà không qua kiểm thử (AI có thể sai/ảo giác).
+2 PHẢI:
+* Phải Review Code: Luôn kiểm tra kỹ code AI sinh ra trước khi chấp nhận.
+* Phải dùng .gitignore: Cấu hình chuẩn để chặn upload file cấu hình nhạy cảm (.env).
+5. Thông điệp cốt lõi: Antigravity chỉ là công cụ hỗ trợ. Kỹ sư Smart Gift Solution chịu trách nhiệm cuối cùng về chất lượng và bảo mật sản phẩm.

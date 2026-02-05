@@ -1,0 +1,304 @@
+﻿SỬ DỤNG TOKEN
+PHẦN 1: KỸ THUẬT TIẾT KIỆM TOKEN 
+1. Tối ưu hóa Đầu vào (Prompting)
+* Ngôn ngữ: Ưu tiên dùng Tiếng Anh. Nếu dùng tiếng Việt, hãy viết gãy gọn.
+* Văn phong: Bỏ qua xã giao ("Please", "Kindly"). Dùng câu mệnh lệnh trực tiếp (Ví dụ: "Viết hàm tính tổng" thay vì "Bạn có thể vui lòng...").
+* Cấu trúc: Dùng dấu phân cách (###, """, XML tags) tách biệt hướng dẫn và dữ liệu.
+* Ví dụ (Few-shot): Hạn chế đưa ví dụ nếu model đủ thông minh (Zero-shot). Chỉ đưa ví dụ khi model gặp khó.
+* Nén: Dùng từ viết tắt ngành (HR, API, FE, BE).
+2. Tối ưu hóa Ngữ cảnh (Context - Quan trọng nhất)
+* Code: Chỉ gửi đoạn code (snippet) liên quan, không gửi cả file.
+* Minify: Xóa khoảng trắng và comment thừa trước khi gửi code.
+* Lịch sử chat: Khi hội thoại dài, yêu cầu model tóm tắt lại, sau đó mở chat mới và paste tóm tắt vào.
+* Caching: Tận dụng tính năng "Context Caching" cho các tài liệu/codebase lớn dùng nhiều lần.
+3. Tối ưu hóa Đầu ra (Output)
+* Chỉ thị: Luôn thêm "Code only, no explanation" khi cần copy-paste.
+* Định dạng: Yêu cầu trả về dạng Git Diff (chỉ phần thay đổi) thay vì viết lại cả file.
+* Dữ liệu: Yêu cầu định dạng JSON hoặc YAML thay vì văn bản tự nhiên.
+
+
+PHẦN 2: CHIẾN LƯỢC CHỌN MODEL TRÊN GOOGLE ANTIGRAVITY
+(các bạn có thể tham khảo hình ảnh để hiểu nhanh về phần này)  
+1. Nhóm tác vụ nhanh & thường nhật (Tiết kiệm nhất)
+* Gemini 3 Flash: Dùng cho debug, sửa lỗi nhanh, viết code mẫu (prototyping), tác vụ lặp lại nhiều. Tốc độ cực nhanh.
+* Gemini 3 Pro (Low): Dùng cho code hàng ngày, độ khó trung bình. Cân bằng giữa độ tin cậy và tốc độ (như một chiếc xe sedan bền bỉ).
+2. Nhóm tác vụ tư duy & tài liệu (Tốn kém hơn)
+* Claude Sonnet 4.5: Dùng viết tài liệu (Documentation), review code chi tiết. Giải thích rõ ràng, thận trọng.
+* Claude Sonnet 4.5 (Thinking): Dùng cho dự án dài hơi (long-running), lập kế hoạch refactor, viết test suite toàn diện. Có khả năng duy trì mạch suy nghĩ tốt.
+3. Nhóm tác vụ chuyên sâu & phức tạp (Tốn kém nhất)
+* Gemini 3 Pro (High): Dùng cho thay đổi kiến trúc, thiết kế hệ thống, vấn đề mới lạ. Lưu ý: Rất tốn token do quy trình "suy nghĩ" ngầm.
+* Claude Opus 4.5 (Thinking): "Trùm cuối". Chỉ dùng khi Sonnet thất bại, xử lý kho code (repo) khổng lồ hoặc di chuyển kiến trúc (migration). Chính xác cao nhưng chậm.
+4. Nhóm dự phòng
+* GPT-OSS 120B (Medium): Dùng khi hết quota Gemini/Claude hoặc cần chạy các tác vụ agentic workflow cơ bản.
+Powerful
+	Lighter
+	Algorithms: Thuật toán phức tạp.
+Debugging: Gỡ lỗi (Logic/Hệ thống).
+System Design: Thiết kế hệ thống.
+Code Optimizations: Tối ưu hóa mã nguồn.
+Refactoring: Tái cấu trúc mã (Sửa code cũ).
+	Simple Implementation: Triển khai mã đơn giản.
+Coding based on a plan: Viết code theo kế hoạch/khung có sẵn.
+Documentation: Viết tài liệu/Comment code.
+Syntax & Formatting: Sửa cú pháp & Định dạng.
+	
+
+PHẦN 3: MẸO QUẢN LÝ QUOTA HIỆU QUẢ
+* Đúng người đúng việc: Không dùng dao mổ trâu (Opus/Pro High) để cắt tiết gà (đổi tên biến).
+* Quy tắc "Tam quá": Nếu model thất bại 3 lần, hãy đổi sang model mạnh hơn ngay, đừng cố thử lại (retry) gây lãng phí.
+* Gom việc (Batching): Gom các task tương tự nhau vào một lần hỏi để tận dụng lại context.
+* Sử dụng Agent Manager: Tận dụng chế độ chạy nền (Asynchronous Manager View) thay vì chat qua lại liên tục để tiết kiệm quota.
+PHẦN 4: MỘT SỐ VÍ DỤ
+
+
+Ví dụ 1: Vue Component
+Model phù hợp: Gemini 3 Pro Low / Claude Sonnet 4.5
+Prompt không tốt:
+Tạo cho tôi một component để hiển thị danh sách sản phẩm. 
+Nó cần đẹp và responsive.
+Prompt tốt:
+### TASK
+Create Vue 3 ProductList component
+
+
+### TECH STACK
+- Vue 3 + Composition API + TypeScript
+- Pinia (state management)
+- TailwindCSS
+- Axios
+
+
+### REQUIREMENTS
+1. Fetch products from `/api/v1/products`
+2. Display grid (3 cols desktop, 2 tablet, 1 mobile)
+3. Each card shows: image, name, price, stock status
+4. Loading skeleton while fetching
+5. Empty state when no products
+6. Error state with retry button
+7. Infinite scroll pagination
+
+
+### PROPS
+- categoryId?: string (optional filter)
+- limit?: number (default 12)
+
+
+### EMITS
+- @product-click(productId: string)
+- @add-to-cart(productId: string)
+
+
+### OUTPUT
+Single file component. TypeScript strict. No explanation.
+
+
+Ví dụ 2: Debug & Fix Code
+Model phù hợp: Gemini 3 Flash / Pro Low
+Prompt không tốt:
+Xin chào, tôi có một vấn đề với code Laravel của tôi. Bạn có thể xem giúp tôi được không? Code của tôi không chạy được, nó cứ báo lỗi gì đó về database. Tôi không biết phải làm sao. Bạn có thể xem toàn bộ file Controller này và giúp tôi sửa với? File rất dài nhưng lỗi ở đâu đó trong đó. Cảm ơn bạn rất nhiều!
+[paste toàn bộ 500 dòng code]
+
+
+Prompt tốt:
+### CONTEXT
+Laravel 10, PHP 8.2, MySQL 8.0
+### ERROR
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+at app/Services/OrderService.php:45
+### RELEVANT CODE [chỉ paste phần code liên quan]
+
+
+Ví dụ 3: Thiết kế API
+Model phù hợp: Claude Sonnet 4.5
+Prompt không tốt:
+Tôi đang xây dựng một hệ thống quản lý đơn hàng cho công ty thương mại điện tử của tôi. Bạn có thể thiết kế API cho tôi không? Tôi muốn có đầy đủ các chức năng CRUD và một số chức năng khác nữa. Hệ thống cần phải bảo mật và có thể mở rộng được. Cảm ơn bạn!
+Prompt tốt:
+### TASK
+Design REST API for e-commerce order management
+### TECH STACK
+- BE: Golang + Gin
+- DB: PostgreSQL
+- Auth: JWT
+- Infra: AWS ECS
+### REQUIREMENTS
+1. Orders CRUD
+2. Order status workflow: pending → confirmed → shipped → delivered
+3. Search/filter by: date range, status, customer_id
+4. Pagination: cursor-based
+5. Rate limit: 100 req/min per user
+### ENTITIES
+- Order: id, customer_id, items[], total, status, created_at
+- OrderItem: id, order_id, product_id, qty, price
+### OUTPUT FORMAT
+YAML format:
+- endpoints with method, path, auth, request_body, response, error_codes
+- Follow RESTful conventions
+- Include idempotency key for POST/PUT
+- No explanation, YAML only
+
+
+Ví dụ 4: Code Review
+Model phù hợp: Claude Sonnet 4.5
+Prompt không tốt:
+Bạn có thể review code này giúp tôi và cho tôi biết có vấn đề gì không? Tôi muốn biết code có clean không, có best practice không, có bug gì không. [paste 300 dòng code]
+Prompt tốt:
+### REVIEW REQUEST
+PR #234: Add payment processing service
+### FOCUS AREAS
+1. Security vulnerabilities
+2. Error handling
+3. Performance bottlenecks
+4. SOLID violations
+### RELEVANT CODE [chỉ paste phần code liên quan]
+
+
+Ví dụ 5: Refactor Legacy Code
+Model phù hợp: Claude Sonnet 4.5 Thinking
+Prompt tốt:
+### OBJECTIVE
+Refactor legacy PHP controller to service pattern
+### CURRENT STATE
+- Fat controller: 800 lines
+- Mixed concerns: validation, business logic, DB queries, email
+- No tests
+- Tightly coupled to Eloquent
+### TARGET STATE
+- Controller: HTTP only (validation, response)
+- Service: Business logic
+- Repository: Data access
+- DTO: Data transfer
+- Unit testable
+### SAMPLE CODE (extract)
+// OrderController.php - CURRENT
+public function store(Request $request)
+{
+    // 1. Validation (30 lines of rules)
+    $validated = $request->validate([...]);
+    
+    // 2. Business logic (50 lines)
+    $discount = 0;
+    if ($request->user()->isPremium()) {
+        $discount = $validated['total'] * 0.1;
+    }
+    if ($validated['coupon']) {
+        $coupon = Coupon::where('code', $validated['coupon'])->first();
+        if ($coupon && $coupon->isValid()) {
+            $discount += $coupon->discount_amount;
+        }
+    }
+    
+    // 3. DB operations (20 lines)
+    $order = new Order();
+    $order->user_id = auth()->id();
+    $order->total = $validated['total'] - $discount;
+    $order->save();
+    
+    // 4. Side effects (15 lines)
+    Mail::to($request->user())->send(new OrderConfirmation($order));
+    
+    return response()->json($order);
+}
+### DELIVERABLES
+1. Directory structure (tree format)
+2. Interface definitions
+3. Refactored code for each file
+4. Example unit test for OrderService
+### OUTPUT: Code blocks only, file path as header. No explanation.
+
+
+Ví dụ 6: System Design
+Model phù hợp: Gemini 3 Pro High
+Prompt tốt:
+### TASK
+Design event-driven order processing system
+### SCALE
+- 10K orders/day peak
+- 99.9% uptime SLA
+- Max latency: 200ms (API), 5min (processing)
+### CURRENT ARCH
+Monolith Laravel → MySQL (single instance)
+Problems: DB bottleneck, no retry, no async processing
+### CONSTRAINTS
+- AWS only (ECS, SQS, RDS, ElastiCache, S3)
+- Team: 5 devs, limited k8s experience
+- Budget: mid-tier
+- Timeline: 3 months migration
+### REQUIREMENTS
+1. Async order processing
+2. Retry with exponential backoff
+3. Dead letter queue for failed orders
+4. Real-time order status updates (WebSocket)
+5. Idempotent operations
+### OUTPUT FORMAT
+YAML with:
+- components: name, type, technology, purpose
+- data_flow: step, from, to, protocol, data
+- failure_handling: scenario, mitigation
+- diagrams: mermaid format
+### FOCUS
+Trade-offs và reasoning cho mỗi decision. No generic advice.
+
+
+
+
+Ví dụ 7: Viết Test Suite
+Model phù hợp: Claude Sonnet 4.5 Thinking
+Prompt tốt:
+### TASK
+Write comprehensive test suite for PaymentService
+### SERVICE CODE
+type PaymentService struct {
+    repo      PaymentRepository
+    gateway   PaymentGateway
+    notifier  NotificationService
+    logger    Logger
+}
+func (s *PaymentService) ProcessPayment(ctx context.Context, req ProcessPaymentRequest) (*PaymentResult, error) {
+    if req.Amount <= 0 {
+        return nil, ErrInvalidAmount
+    }
+    if req.Currency == "" {
+        req.Currency = "VND"
+    }
+    
+    existing, err := s.repo.FindByIdempotencyKey(ctx, req.IdempotencyKey)
+    if err != nil && !errors.Is(err, ErrNotFound) {
+        return nil, fmt.Errorf("check duplicate: %w", err)
+    }
+    if existing != nil {
+        return existing.ToResult(), nil
+    }
+    
+    gatewayResp, err := s.gateway.Charge(ctx, ChargeRequest{
+        Amount:   req.Amount,
+        Currency: req.Currency,
+        CardToken: req.CardToken,
+    })
+    if err != nil {
+        s.logger.Error("gateway charge failed", "error", err)
+        return nil, ErrGatewayFailed
+    }
+    
+    payment := &Payment{
+        ID:             uuid.New(),
+        OrderID:        req.OrderID,
+        Amount:         req.Amount,
+        Status:         StatusSuccess,
+        GatewayTxID:    gatewayResp.TransactionID,
+        IdempotencyKey: req.IdempotencyKey,
+    }
+    if err := s.repo.Save(ctx, payment); err != nil {
+        return nil, fmt.Errorf("save payment: %w", err)
+    }
+    
+    go s.notifier.SendPaymentConfirmation(payment)
+    
+    return payment.ToResult(), nil
+}
+### TEST REQUIREMENTS
+- Unit tests with mocks (testify/mock)
+- Cover: happy path, validation errors, idempotency, gateway failures, repo failures
+- Table-driven tests where applicable
+- Test naming: Test_ProcessPayment_<Scenario>_<Expected>
+### OUTPUT
+Complete test file, ready to run. No explanation. Code only.

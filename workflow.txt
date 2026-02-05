@@ -1,0 +1,204 @@
+﻿WORKFLOWS
+PHẦN 1: GIỚI THIỆU CHUNG VỀ WORKFLOW
+1. Workflows là gì?
+Workflows là các quy trình tự động hóa giúp Agent thực hiện các tác vụ phức tạp theo từng bước. Bạn có thể sử dụng **40+ workflows sẵn có** từ repo https://github.com/harikrishna8121999/antigravity-workflows.
+2. Hướng dẫn cài đặt
+Bước 1: Mở Terminal trong project của bạn
+Workflows được cài **vào từng project**, không phải cài global. Vì vậy cần phải mở cmd ở thư mục gốc của project.
+Bước 2: Chạy lệnh cài đặt
+Cài các workflow cơ bản (khuyến nghị cho tất cả dev)
+npx antigravity-workflows install git-commit git-pr code-review
+Hoặc cài theo vai trò
+# Cho Backend Developer
+npx antigravity-workflows install git-commit new-api unit-test db-schema
+
+
+# Cho Frontend Developer  
+npx antigravity-workflows install git-commit new-component e2e-test
+
+
+# Cho DevOps
+npx antigravity-workflows install git-commit docker ci-cd deploy
+
+
+# Cài tất cả (nếu muốn)
+npx antigravity-workflows install --all
+Bước 3: Kiểm tra kết quả
+Sau khi cài xong, workflows sẽ nằm trong thư mục `.agent/workflows/`:
+Kiểm tra bằng lệnh:
+macOS/Linux: ls -la .agent/workflows/
+Windows: dir .agent\workflows\
+
+
+Bước 4: (Tùy chọn) Thêm vào .gitignore
+Lựa chọn
+	Khi nào dùng
+	Cách làm
+	Commit lên Git
+	Team muốn share cùng workflows
+	Không cần làm gì thêm
+	Không commit
+	Mỗi người tự cài riêng
+	Thêm vào `.gitignore`
+	3. Cách sử dụng Workflows
+Sau khi cài, gõ `/tên-workflow` trong chat:
+/git-commit    → Agent sẽ giúp bạn commit code đúng chuẩn
+/unit-test       → Agent sẽ viết unit test cho code
+/deploy         → Agent sẽ hướng dẫn deploy từng bước
+4. Danh sách Workflows theo Category
+
+
+DEVELOPMENT
+Workflow
+	Mô tả
+	new-project
+	Khởi tạo project mới
+	new-component
+	Tạo component mới
+	new-api
+	Tạo API endpoint
+	new-feature
+	Thêm feature mới
+	refactor
+	Refactor code
+	migrate
+	Migration code/database
+	
+
+
+
+GIT & COLLABORATION
+Workflow
+	Mô tả
+	git-commit
+	Commit code đúng chuẩn Conventional Commits
+	git-pr
+	Tạo Pull Request
+	git-conflict
+	Resolve merge conflicts
+	git-rebase
+	Rebase branch
+	
+
+
+
+TESTING & QUALITY
+Workflow
+	Mô tả
+	unit-test
+	Viết unit tests
+	e2e-test
+	Viết E2E tests
+	playwright-test
+	Test với Playwright
+	test-coverage
+	Kiểm tra test coverage
+	code-review
+	Review code
+	
+
+DEBUGGING
+Workflow
+	Mô tả
+	debug-error
+	Debug lỗi
+	debug-log
+	Phân tích logs
+	performance
+	Tối ưu performance
+	
+
+SECURITY
+Workflow
+	Mô tả
+	security-audit
+	Audit bảo mật
+	dependency-check
+	Kiểm tra dependencies
+	auth-implementation
+	Implement authentication
+	
+
+DOCUMENTATION
+Workflow
+	Mô tả
+	readme
+	Viết README
+	api-docs
+	Viết API documentation
+	architecture
+	Document kiến trúc
+	
+
+DEPLOYMENT
+Workflow
+	Mô tả
+	deploy
+	Deploy ứng dụng
+	docker
+	Setup Docker
+	ci-cd
+	Setup CI/CD pipeline
+	railway-deploy
+	Deploy lên Railway
+	vercel-deploy
+	Deploy lên Vercel
+	
+
+DATABASE
+Workflow
+	Mô tả
+	db-schema
+	Thiết kế database schema
+	db-migrate
+	Migration database
+	db-seed
+	Seed data
+	
+
+PHẦN 2: SỬ DỤNG AGENT ĐỂ TẠO WORKFLOW
+Các workflows có sẵn thường quá generic. Tự tạo workflow phù hợp với tech stack của team sẽ hiệu quả hơn nhiều.
+1. Cấu trúc thư mục
+your-project/
+├── .agent/
+│   └── workflows/
+│       └── your-workflow-name.md   ← File workflow
+2. Cách yêu cầu Agent tạo workflow
+Thay vì tự viết, bạn có thể yêu cầu Agent tạo. Cung cấp các thông tin sau:
+Thông tin
+	Bắt buộc?
+	Ví dụ
+	Tên workflow
+	✅ Có
+	new-laravel-api, deploy-aws
+	Mục đích
+	✅ Có
+	Tạo API endpoint trong Laravel
+	Các bước cần làm
+	✅ Có
+	1. Tạo migration, 2. Tạo model...
+	Tech stack
+	⭐ Nên có
+	Laravel 10, PHP 8.2, MySQL
+	Conventions
+	⭐ Nên có
+	Naming, folder structure, response format
+	
+
+3. Ví dụ prompt yêu cầu Agent tạo workflow
+Tạo workflow tên là "new-laravel-api" với các đặc điểm sau:
+Mục đích: Tạo API CRUD endpoint trong Laravel
+Tech stack: Laravel 10, PHP 8.2, MySQL
+Các bước:
+1. Hỏi tên resource (Product, Order, etc.)
+2. Tạo migration trong database/migrations
+3. Tạo Model trong app/Models với fillable và relationships
+4. Tạo Controller trong app/Http/Controllers/Api
+5. Tạo FormRequest cho validation
+6. Thêm route vào routes/api.php
+7. Viết test case
+Conventions:
+- Response format: {"success": true, "data": {...}}
+- API versioning: /api/v1/[resource]
+- Sử dụng soft deletes cho tất cả models
+NOTE: Phần lớn conventions đã có trong Global Rules. Khi tạo workflow, chỉ cần bổ sung chi tiết cụ thể hơn nếu cần.

@@ -1,0 +1,354 @@
+﻿RULES
+PHẦN 1: GLOBAL RULES 
+Global Rules là bộ quy tắc nền tảng (baseline), đóng vai trò như "Hiến pháp" của team. Bất kể bạn đang mở dự án nào trên máy tính, AI sẽ luôn phải tuân thủ bộ quy tắc này đầu tiên.
+1. Vị trí & Phạm vi áp dụng
+* Phạm vi: Áp dụng cho tất cả các Workspace (dự án) trên máy tính của bạn.
+* Vị trí lưu trữ: 
+* macOS/Linux: ~/.gemini/GEMINI.md
+* Windows: %USERPROFILE%\.gemini\GEMINI.md
+* Bảo mật: File này chỉ nằm trên máy tính từng cá nhân (Local), không commit lên Git.
+2. Hướng dẫn thiết lập trên Antigravity
+Các bạn chỉ cần thực hiện 1 lần duy nhất:
+Bước 1: Mở panel Customizations (nhấp vào dấu ... ở góc trên cùng của panel Agent).  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bước 2: Chuyển sang tab Customizations.  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bước 3: Nhấp vào nút + Global để tạo Global rules.  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bước 4: Copy và dán nội dung tiêu chuẩn của công ty vào, sau đó lưu lại.    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nội dung tham khảo: (copy từ dưới cho đến *Smart Gift Solution © 2026 - Confidential*)
+# 🚀 Smart Gift Solution - Global Rules for Antigravity
+> **Team Size:** ~20 Developers | **Infra:** AWS 100% | **Workflow:** Git Flow
+---
+## 📋 Tech Stack
+| Layer | Technologies |
+|-------|-------------|
+| **Frontend** | Vue.js (primary), React (Zalo Miniapp) |
+| **Backend** | PHP/Laravel (legacy), Golang (new projects) |
+| **Database** | MySQL, PostgreSQL, Redis |
+| **Infrastructure** | Docker, Kubernetes, AWS |
+---
+## 🗣️ Communication Style
+### Language
+- Respond in the **same language** as the user's query
+- Supported: **Vietnamese**, **English**, **Japanese**
+### Tone & Detail
+- **Professional** and direct
+- Go straight to the solution first
+- Provide detailed explanations only when asked
+- When uncertain: **Ask for clarification** + suggest the best solution for approval
+---
+## 💻 Coding Conventions
+### General
+- Follow **framework-specific conventions** (Laravel standards for PHP, Go conventions for Golang, Vue style guide for frontend)
+- Auto-format code according to project settings
+- Use **environment variables** for all configurations
+### Git Workflow
+- **Branching:** Git Flow (`main`, `develop`, `feature/*`, `release/*`, `hotfix/*`)
+- **Commit Messages:** Conventional Commits format:
+ ```
+ feat: add new payment integration
+ fix: resolve login authentication bug
+ refactor: optimize database queries
+ docs: update API documentation
+ chore: update dependencies
+ ```
+---
+## 🔒 Security Rules (MANDATORY)
+### Secrets & Credentials
+- ❌ **NEVER** hardcode API keys, passwords, tokens, or secrets
+- ✅ Always use placeholders or environment variables
+- ✅ Reference `.env` files or AWS Secrets Manager
+### Data Protection
+- ❌ **NEVER** access files outside project scope without MCP Server permission
+- ❌ **NEVER** send core business logic to third-party services without redaction
+- ✅ Validate all inputs, sanitize all outputs (OWASP standards)
+- ✅ Never log sensitive data (passwords, tokens, PII)
+---
+## 🚫 Prohibited Actions
+### 1. Deployment & Authority
+- ❌ Auto-deploy or run `git push --force` to main/master
+- ❌ Trigger CI/CD pipelines to Production without approval
+- ❌ Delete packages, change database schema, or switch frameworks without consent
+- ❌ Auto-approve Pull Requests
+### 2. Destructive Operations
+- ❌ Execute dangerous shell commands (`rm -rf /`, `chmod 777`, `sudo` commands)
+- ❌ Modify IDE core config files (`.gemini/`, `.vscode/`) without notification
+- ❌ Delete files without explicit confirmation
+- ❌ Modify production config files (`.env.production`, `docker-compose.prod.yml`)
+- ❌ Run commands affecting production database
+### 3. Code Quality
+- ❌ Generate unnecessary boilerplate code
+- ❌ Hallucinate non-existent functions or APIs
+- ✅ Admit when unsure and request documentation
+---
+## ✅ Best Practices (REQUIRED)
+### Testing
+- Write unit tests for new features
+- Maintain reasonable test coverage
+- Test edge cases and error handling
+### Documentation
+- Add comments for complex logic
+- Include README for each service
+- Document API endpoints
+### Performance
+- Optimize token usage
+- Write clean, efficient code
+- Follow DRY (Don't Repeat Yourself) principle
+---
+## 🎯 Quick Reference
+| Action | Allowed? |
+|--------|----------|
+| Write code following framework standards | ✅ Yes |
+| Suggest architectural improvements | ✅ Yes |
+| Auto-format code | ✅ Yes |
+| Install new packages (with notification) | ✅ Yes |
+| Push to production | ❌ No |
+| Delete files without asking | ❌ No |
+| Hardcode secrets | ❌ No |
+| Run destructive commands | ❌ No |
+---
+*Smart Gift Solution © 2026 - Confidential*
+
+
+PHẦN 2: WORKSPACE RULES
+Workspace Rules là bộ quy tắc riêng cho từng project. Khi bạn mở một project cụ thể, Agent sẽ tuân thủ cả Global Rules VÀ Workspace Rules của project đó.
+
+
+1. So sánh Global vs Workspace Rules
+Thuộc tính
+	Global Rules
+	Workspace Rules
+	Phạm vi
+	Tất cả projects
+	Chỉ project hiện tại
+	Vị trí (macOS/Linux)
+	~/.gemini/GEMINI.md
+	[project]/.gemini/GEMINI.md
+	Vị trí (Windows)
+	%USERPROFILE%\.gemini\GEMINI.md
+	[project]\.gemini\GEMINI.md
+	Commit lên Git?
+	❌ Không
+	✅ Có thể (tùy team)
+	Ưu tiên
+	Thấp hơn
+	Cao hơn (override Global)
+	
+
+2. Khi nào cần Workspace Rules?
+Trường hợp
+	Ví dụ
+	Project dùng tech stack khác team
+	Project A dùng NestJS thay vì Laravel
+	Quy tắc code riêng của project
+	Naming convention đặc biệt
+	Thông tin context của project
+	"Đây là microservice xử lý payment"
+	Các file/folder cần ignore
+	"Không sửa code trong folder /legacy"
+	
+
+3. Hướng dẫn tạo Workspace Rules
+Cách 1: Qua UI
+1. Mở panel Customizations (dấu `...`)
+2. Chọn tab Customizations
+3. Nhấp + Workspace (thay vì + Global)
+4. Viết rules và lưu
+Cách 2: Tạo file thủ công
+* macOS/Linux: mkdir -p .gemini && touch .gemini/GEMINI.md
+* Windows (PowerShell):
+New-Item -ItemType Directory -Force -Path .gemini
+New-Item -ItemType File -Path .gemini\GEMINI.md
+
+
+
+
+
+
+
+
+4. Thứ tự ưu tiên Rules
+Đối tượng
+	Thứ tự ưu tiên
+	Workspace Rules
+	Cao nhất, override Global nếu conflict
+	Global Rules
+	Áp dụng cho mọi project
+	Agent Default Behavior
+	Thấp nhất
+	
+
+5. Ví dụ Workspace Rules
+# Project: Payment Service
+
+
+## Context
+- Đây là microservice xử lý thanh toán
+- Sử dụng Golang 1.21+
+- Database: PostgreSQL
+- Message Queue: RabbitMQ
+
+
+## Coding Standards
+- Sử dụng Clean Architecture
+- Mọi API endpoint phải có middleware authentication
+- Log tất cả transactions vào audit table
+
+
+## Forbidden
+- KHÔNG sửa code trong folder /pkg/legacy
+- KHÔNG thay đổi database schema mà không có migration file
+- KHÔNG gọi external API trực tiếp, phải qua adapter layer
+
+
+## Important Files
+- `internal/domain/` - Business logic core
+- `internal/usecase/` - Application logic
+- `internal/delivery/` - HTTP handlers
+
+
+Note: Đặt các quy tắc chung của team vào Global Rules, chỉ đặt các quy tắc đặc thù vào Workspace Rules.

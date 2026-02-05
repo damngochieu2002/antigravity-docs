@@ -1,0 +1,104 @@
+﻿GIỚI THIỆU CHUNG VỀ ANTIGRAVITY
+
+
+1. Antigravity là gì?
+Antigravity là IDE (Integrated Development Environment) thế hệ mới của Google, được thiết kế dựa trên nền tảng VS Code và tích hợp sẵn AI Agent có khả năng tự thực thi các tác vụ lập trình.
+2. Khác biệt so với VS Code + ChatGPT
+Cách làm cũ (VS Code + ChatGPT)        
+	Cách làm mới (Antigravity)
+	Copy code từ ChatGPT → Paste vào VS Code
+	Agent tự viết vào file
+	Tự chạy lệnh terminal        
+	Agent tự chạy lệnh
+	Tự tạo file, sửa file        
+	Agent tự tạo/sửa file
+	Tab qua lại liên tục giữa 2 ứng dụng        
+	Một cửa sổ duy nhất
+	ChatGPT không biết context project        
+	Agent thấy toàn bộ cấu trúc project
+	Phải giải thích lại context mỗi lần hỏi        
+	Agent nhớ lịch sử conversation
+	
+
+3. Agent có thể làm gì?
+Khả năng
+	Ví dụ thực tế
+	Viết code        
+	"Tạo API endpoint GET /users với pagination" → Agent viết code và tạo file luôn
+	Sửa code        
+	"Thêm validation cho field email" → Agent tìm file và sửa đúng chỗ
+	Chạy terminal        
+	"Chạy npm install và build project" → Agent thực thi lệnh
+	Đọc & phân tích
+	Agent tự đọc file để hiểu context trước khi trả lời
+	Tìm kiếm        
+	"Tại sao lỗi này xảy ra?" → Agent phân tích stack trace và đề xuất fix
+	Debug
+	"Tại sao lỗi này xảy ra?" → Agent phân tích stack trace và đề xuất fix
+	Viết test        
+	"Viết unit test cho function này" → Agent tạo test file hoàn chỉnh
+	Refactor
+	"Tách function này thành các hàm nhỏ hơn" → Agent refactor và giữ logic
+	
+
+
+
+
+
+
+
+
+
+4. Các khái niệm cơ bản
+Khái niệm
+	Mô tả
+	Agent        
+	Trợ lý AI tích hợp sẵn, bạn chat để yêu cầu làm việc
+	Prompt        
+	Câu lệnh/yêu cầu bạn gửi cho Agent
+	Context        
+	Thông tin về project mà Agent "nhìn thấy"
+	Approve/Reject
+	Bạn duyệt hoặc từ chối thay đổi của Agent trước khi áp dụng
+	Rules        
+	Quy tắc bạn đặt ra để Agent tuân theo (xem Hướng dẫn Nâng cao)
+	Skills
+	Bộ kỹ năng mở rộng cho Agent (xem Hướng dẫn Nâng cao)
+	Workflows        
+	Quy trình tự động hóa các tác vụ lặp lại (xem Hướng dẫn Nâng cao)
+	
+
+5. Quy trình làm việc của Agent  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ở mỗi bước, bạn có quyền:
+   *  Approve: Đồng ý và tiếp tục
+   *  Reject: Từ chối và yêu cầu sửa
+   * Comment: Góp ý để Agent điều chỉnh
+   6. Khi nào nên dùng Antigravity?
+✅ Nên dùng
+	❌ Không nên dùng
+	Viết code mới theo yêu cầu
+	Xử lý dữ liệu nhạy cảm (PII, credentials)
+	Debug và fix lỗi
+	Xử lý dữ liệu nhạy cảm (PII, credentials)
+	Refactor code cũ
+	Các tác vụ cần 100% chính xác (không qua review)
+	Viết unit test
+	Làm việc với database Production
+	Tạo documentation
+	
+
+	Prototype nhanh
