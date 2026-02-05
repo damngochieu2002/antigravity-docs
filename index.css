@@ -494,12 +494,14 @@ body::before {
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
-    margin-bottom: 16px;
-    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #a78bfa 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    width: fit-content;
+    display: block;
 }
 
 .section-subtitle {
@@ -507,6 +509,7 @@ body::before {
     font-size: 1.125rem;
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
 }
 
 /* Cards Grid */
